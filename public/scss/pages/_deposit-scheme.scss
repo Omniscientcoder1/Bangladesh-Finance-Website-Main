@@ -1,0 +1,130 @@
+// styles/_deposit-scheme.scss
+
+.deposit-scheme-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('/images/deposite-cover-1.png') no-repeat center center;
+    background-size: contain; // Ensures the entire image fits on the screen
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.deposit-scheme-content {
+    padding: 50px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        text-align: center;
+        li {
+            margin-bottom: 10px;
+            text-align: center;
+
+            a {
+                color: blue;
+                text-decoration: underline;
+                text-align: center;
+
+                &:hover {
+                    color: darkblue;
+                }
+            }
+        }
+    }
+
+    .apply-now {
+        margin-top: 30px;
+        text-align: center;
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}
+
+.islamic-deposit-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('/images/hero4.png') no-repeat center center;
+    background-size: contain; // Ensures the entire image fits on the screen
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .deposit-scheme-banner,
+    .islamic-deposit-banner {
+        padding: 0; // Remove extra padding for smaller devices
+        background-size: contain;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .deposit-scheme-banner,
+    .islamic-deposit-banner {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+}

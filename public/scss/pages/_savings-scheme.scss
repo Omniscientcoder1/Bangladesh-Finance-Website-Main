@@ -1,0 +1,155 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #0056b3;
+$text-color: #333;
+$background-color: #f9f9f9;
+$banner-height: 60vh;
+
+// Mixin for flex-center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Banner Section
+.banner {
+  background: url('/images/saving-1.png') no-repeat center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: contain;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+
+  .bannerContent {
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
+    padding-top: 0px;
+    border-radius: 10px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      margin-top:700px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 50px;
+    }
+  }
+}
+
+// Content Section
+.content {
+  background-color: $background-color;
+  padding-top: 30px;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+
+    h2 {
+      font-size: 2rem;
+      color: $text-color;
+      margin-bottom: 20px;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+      color: $text-color;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .downloadSection {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      .downloadButton {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 10px 20px 30px 20px; // Top: 10px, Bottom: 30px
+        text-decoration: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center; // Center horizontally using flex
+        align-items: center; // Center vertically using flex
+        text-align: center; // Ensure text is centered
+    
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+    
+    .downloadSection {
+        display: flex;
+        justify-content: center; // Center the button container horizontally
+        align-items: center; // Center the button container vertically
+        height: 100%;
+    }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .banner {
+    height: 50vh;
+
+    .bannerContent {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .content {
+    padding: 30px 10px;
+
+    .container {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 40vh;
+
+    .bannerContent {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .content {
+    padding: 20px 5px;
+
+    .container {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
